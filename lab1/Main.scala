@@ -99,7 +99,7 @@ object Main extends App {
     resultList
   }
   def fileLines(file: java.io.File): List[String] = {
-    scala.io.Source.fromFile(file, "ISO-8859-1").getLines.toList //definiuje kodowanie zeby bylo takie jakie java rozumie
+    scala.io.Source.fromFile(file, "ISO-8859-1").getLines.toList
   }
   
   //print names of all .scala files which are in filesHere & are non empty
@@ -119,6 +119,6 @@ object Main extends App {
   def printNonEmpty(pattern: String): Unit = {
     require(new java.io.File(pattern).isDirectory)
     val filesHere = new java.io.File(pattern).listFiles
-    filesHere.filter(f => f.length != 0 && f.toString.split("\\.").last == "scala").foreach(f => println(f.toString))
+    filesHere.filter(f => f.length != 0 && f.toString.split("\\.").last == "scala").foreach(f => println(f => f.toString))
   }
 }
