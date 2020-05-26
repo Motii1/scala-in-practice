@@ -1,6 +1,6 @@
 *.class
 .metals/
 .vscode
-*.idea
-*/.env
-*/target
+.idea
+.env
+target
